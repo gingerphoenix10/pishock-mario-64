@@ -7,14 +7,16 @@ The mod uses a specific version of Super Mario 64. That being [Super Mario 64 Co
 
 > [!WARNING]
 > I'm not responsible for any damages done by this project (AI and Pancake wrote most of this anyways, do I look like I know how to write bash scripts?).
+> 
 > (I also don't even own a shock collar. I am just praying this works.)
+> 
 > Please be careful.
 
 > [!IMPORTANT]
 > For legal reasons, this tool was not designed to be used on animals or humans. You can probably get away with using it on aliens, if you find any.
 > I'm not sure how this rule extends to catgirls and other hybrids.. ask your lawyer
 
->(note, none of that last part was written by me. Don't quote me on that)
+>(NOTE: none of that last part was written by me. Don't quote me on that)
 
 ## How do I use it?
 Well, first of all you're going to need a [shock collar](https://pishock.com/). Then you're going to need [Super Mario 64 Coop DX](https://github.com/coop-deluxe/sm64coopdx/releases) (LINUX ONLY). Then clone this repo (or just download start.sh and shockms.sh) into the same directory.
