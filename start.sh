@@ -40,7 +40,7 @@ do
     # Check stdout for 'Local Player Damaged'
     if [[ "$line" == *"Local Player Damaged"* ]]; then
         echo "goomba'd or smth"
-        #./../shockms.sh $(shuf -i $MIN_INTENSITY-$MAX_INTENSITY -n 1) $DURATION
+        ./shockms.sh $(shuf -i $MIN_INTENSITY-$MAX_INTENSITY -n 1) $DURATION
     fi
 
 done
