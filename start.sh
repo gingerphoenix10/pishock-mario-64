@@ -29,27 +29,18 @@ fi
 if [ ! -f "./mods/pishock.lua" ]; then
     echo "Installing the PiShock mod."
     printf -- "-- name: PiShock\n-- description: Shocks a PiShock shock collar any time you take damage.\n-- pausable: true\nprint(\"Local Player Damaged\")" >> ./mods/PiShock.lua
-    exit 1
 fi
-
-# Create timeout
-NEXT_SHOCK=$(($(date +%s) + $TIMEOUT))
 
 # Launch the game
 echo "Launching sm64coopdx..."
-stdbuf -oL script -c ./sm64coopdx -f /dev/null | while IFS= read -r line
+stdbuf -oL "./sm64coopdx" | while IFS= read -r line
 do
     echo $line
 
-    # Check if the timeout has not been reached
-    if [ $(date +%s) -lt $NEXT_SHOCK ]; then
-        continue
-    fi
-
     # Check stdout for 'Local Player Damaged'
-    if [[ "$line" =~ *"Local Player Damaged"* ]]; then
+    if [[ "$line" == *"Local Player Damaged"* ]]; then
+        echo "goomba'd or smth"
         #./../shockms.sh $(shuf -i $MIN_INTENSITY-$MAX_INTENSITY -n 1) $DURATION
-        NEXT_SHOCK=$(($(date +%s) + $TIMEOUT))
     fi
 
 done
