@@ -28,7 +28,7 @@ if [ ! -d "mods" ]; then
 fi
 if [ ! -f "./mods/pishock.lua" ]; then
     echo "Installing the PiShock mod."
-    printf -- "-- name: PiShock\n-- description: Shocks a PiShock shock collar any time you take damage.\n-- pausable: true\nprint(\"Local Player Damaged\")" >> ./mods/PiShock.lua
+    printf -- "-- name: PiShock\n-- description: Shocks a PiShock shock collar any time you take damage.\n-- pausable: true\nlocal prev=math.floor(gMarioStates[0].health/255)\nfunction update()\n    if (math.floor(gMarioStates[0].health/255)<prev) then\n        print(\"Local Player Damaged\")\n    end\n    prev=math.floor(gMarioStates[0].health/255)\nend\nhook_event(HOOK_MARIO_UPDATE, update)" >> ./mods/PiShock.lua
 fi
 
 # Launch the game
