@@ -34,10 +34,10 @@ export PISHOCK_CODE="FFFFFFFFFFF"
 Finally, run `./start.sh` and enjoy the game!
 
 ## I'm on Windows/Mac
-The scripts were made to be run on Linux systems, but you can still manually make it work. Just launch the exe file with the `"--console"` parameter, and copy the PiShock.lua file from the linux script into the mods folder. Then just read the output from the game, and call the PiShock API whenever "Local Player Damaged" is sent to the console. Have fun!
+The scripts were made to be run on Linux systems, but you can still manually make it work. Just launch the exe file with console output, and copy the PiShock.lua file from the linux script into the mods folder. Then just read the output from the game, and call the PiShock API whenever "Local Player Damaged" is sent to the console. Have fun!
 
 ## How does it work?
-On first launch, it'll create a lua script in the mods folder. It'll print "Local Player Damaged" to the console whenever the local user's health decreases. The `start.sh` script then launches the game with the `"--console"` output, allowing it to read any logs sent from mods. The actual PiShock stuff was pretty much all done by [@PancakeTAS](https://github.com/PancakeTAS), so you can ask her about that part lmao
+On first launch, it'll create a lua script in the mods folder. It'll print "Local Player Damaged" to the console whenever the local user's health decreases. The `start.sh` script then launches the game with console output, allowing it to read any logs sent from mods. The actual PiShock stuff was pretty much all done by [@PancakeTAS](https://github.com/PancakeTAS), so you can ask her about that part lmao
 
 ## How do I know it works?
 Launching the game and taking damage should shock you. If you're scared of malfunction, check the pishock logs on the website without the shock collar on. If you're still scared... well you installed the mod, what did you expect?
